@@ -54,38 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
       </article>
     </section>
 
-    <section class="section-block">
-      <div class="section-head">
-        <h3>바로 가기</h3>
-        <p>TF 회의에서 바로 눌러보면 좋은 페이지들입니다.</p>
-      </div>
-      <div class="link-card-grid">
-        <a class="link-card" href="info.html">
-          <strong>사업안내</strong>
-          <span>정책 설명, 설계 포인트, 화면 검토 메모</span>
-        </a>
-        <a class="link-card" href="apply.html">
-          <strong>학부모 신청</strong>
-          <span>지원형태 선택, 학교 검색, 신청 저장</span>
-        </a>
-        <a class="link-card" href="usage.html">
-          <strong>사용 안내</strong>
-          <span>신청자/관리자 이용 흐름 요약</span>
-        </a>
-        <a class="link-card" href="admin-list.html">
-          <strong>관리자 신청 현황</strong>
-          <span>상태 변경, 검색, CSV 다운로드</span>
-        </a>
-        <a class="link-card" href="admin-create.html">
-          <strong>관리자 신규 등록</strong>
-          <span>다자녀 관리자 폼과 유사한 테이블 레이아웃</span>
-        </a>
-        <a class="link-card" href="faq.html">
-          <strong>FAQ</strong>
-          <span>회의 설명용 예상 질문과 답변</span>
-        </a>
-      </div>
-    </section>
 
     <section class="section-block">
       <div class="section-head">
