@@ -49,29 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </section>
 
-    <section class="section-block">
-      <div class="section-head">
-        <h3>운영 메모</h3>
-      </div>
-      <ul class="check-list">
-        <li>바우처 단일형이면 신청서가 짧아지고 민원 응대 문구가 중요해집니다.</li>
-        <li>현물/바우처 선택형이면 학부모 입장에서 “언제까지 바꿀 수 있는지” 질문이 많아질 가능성이 큽니다.</li>
-        <li>신입생 시점에는 반/번호가 미정일 수 있으므로 화면상 optional 처리 여부를 회의에서 합의해두면 좋습니다.</li>
-        <li>학교 데이터는 엑셀 기반으로 두고, 실제 운영에서는 최신 학교 마스터를 정기 반영하는 흐름이 필요합니다.</li>
-      </ul>
-    </section>
 
-    <section class="section-block">
-      <div class="section-head">
-        <h3>현재 데모 설정</h3>
-      </div>
-      <div class="alert-box">
-        <p>
-          현재 <strong>${window.AppUtil.getModeLabel()}</strong> 모드로 설정되어 있습니다.
-          <code>assets/js/config.js</code> 의 <code>policy.mode</code> 값을
-          <code>"voucher"</code> 또는 <code>"choice"</code> 로 바꾸면 안내와 신청서 UI가 함께 바뀝니다.
-        </p>
-      </div>
-    </section>
   `;
 });
