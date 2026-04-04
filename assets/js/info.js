@@ -65,39 +65,14 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </section>
 
-    <section class="section-block">
-      <div class="section-head">
-        <h3>외주 개발로 넘길 때 전달하면 좋은 포인트</h3>
-      </div>
-      <div class="feature-grid">
-        <article class="feature-card">
-          <h4>레이아웃 우선 고정</h4>
-          <p>헤더, GNB, 좌측 사이드메뉴, breadcrumb, 관리자 테이블폼을 우선 합의하면 나중에 JSP 전환이 쉬워집니다.</p>
-        </article>
-        <article class="feature-card">
-          <h4>정책 변수 분리</h4>
-          <p>지원형태, 지급 문구, 필수 입력항목을 설정값처럼 분리해두면 정책 변경에 대응하기 좋습니다.</p>
-        </article>
-        <article class="feature-card">
-          <h4>학교 데이터 키 설계</h4>
-          <p>학교명이 아니라 학교 ID/코드 기준으로 저장하도록 요구하면 중복명 이슈를 피할 수 있습니다.</p>
-        </article>
-        <article class="feature-card">
-          <h4>관리자 검토 단계</h4>
-          <p>접수 → 검토중 → 승인/보완요청/반려 같은 상태값을 초기에 합의하면 목록/통계 설계가 안정됩니다.</p>
-        </article>
-      </div>
-    </section>
 
     <section class="section-block">
       <div class="section-head">
-        <h3>데모 범위</h3>
+        <h3>테스트 범위</h3>
       </div>
       <div class="alert-box subtle">
         <p>
-          이 프로토타입은 <strong>실제 인증, 결제, 정산, 개인정보 서버 저장 기능 없이</strong>
-          화면 흐름과 데이터 구조만 검토하기 위한 정적 데모입니다.
-          그래서 신청 결과는 브라우저에만 저장되고, 새 기기에서는 공유되지 않습니다.
+          <strong>실제 인증, 결제, 정산, 개인정보 서버 저장 기능 없이</strong> 화면 흐름과 데이터 구조만 검토하기 위한 테스트 페이지입니다.
         </p>
       </div>
     </section>
