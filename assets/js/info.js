@@ -16,12 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
       </article>
 
       <article class="info-card">
-        <h3>화면 설계 원칙</h3>
+        <h3>화면 설계</h3>
         <ul class="check-list">
           <li>도교육청 도메인 하위 서비스처럼 보이도록 공공기관형 레이아웃을 유지했습니다.</li>
           <li>관리자 화면은 다자녀 관리자 추가 폼과 비슷한 테이블 구조를 적용했습니다.</li>
-          <li>학교명 중복 가능성을 고려해 내부 저장 키는 <code>schoolId</code>로 처리합니다.</li>
-          <li>정책이 바뀌어도 <code>config.js</code> 수정만으로 주요 UI가 바뀌도록 구성했습니다.</li>
         </ul>
       </article>
     </section>
@@ -29,11 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
     <section class="section-block">
       <div class="section-head">
         <h3>정책안 비교</h3>
-        <p>회의에서 바로 설명하기 쉽게 두 가지 시나리오를 나란히 정리했습니다.</p>
+        <p>바우처 단일 지원으로 통합/ 또는 바우처와 현물 혼합</p>
       </div>
       <div class="table-scroll">
         <table class="tbl-list compare-table">
-          <caption>정책안 비교</caption>
+          <caption>비교</caption>
           <thead>
             <tr>
               <th scope="col">구분</th>
