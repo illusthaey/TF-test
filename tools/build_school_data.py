@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 """
-학교 엑셀 + 관리자 HTML option 목록을 합쳐 schools-data.js를 생성하는 스크립트
+학교 엑셀 + 관리자 HTML option 목록을 합쳐 schools-data.js 조각을 생성하는 참고 스크립트
+
+참고:
+현재 배포 구조는 각 페이지 index.html 내부에 학교 데이터를 인라인으로 포함합니다.
+이 스크립트는 원본 데이터 조각을 다시 생성할 때 참고용으로 남겨둔 것입니다.
 
 예시:
 python tools/build_school_data.py \
   --xlsx "../강원특별자치도교육청 산하 학교 현황.xlsx" \
   --html "../붙여넣은 텍스트 (1).txt" \
-  --out "../assets/js/schools-data.js"
+  --out "../build/schools-data.js"
 """
 
 from __future__ import annotations

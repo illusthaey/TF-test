@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="강원특별자치도교육청 교복 지원 TF 테스트용 정적 프로토타입">
   <title>강원특별자치도교육청 교복 지원</title>
-  <link rel="stylesheet" href="static/style.css">
+  <link rel="stylesheet" href="../static/style.css">
 </head>
-<body data-page="home" data-base="">
+<body data-page="faq" data-base="../">
   <div id="site-header"></div>
   <main id="main-content">
     <div id="sub-visual"></div>
@@ -1281,116 +1281,47 @@ bindDemoSearchForms(scope = document) {
 document.addEventListener("DOMContentLoaded", () => {
   const mount = document.getElementById("page-content");
   if (!mount) return;
+  const isVoucherOnly = window.APP_CONFIG.policy.mode === "voucher";
 
-  const items = window.AppDB.load();
-  const summary = window.AppUtil.summarizeApplications(items);
-  const mode = window.APP_CONFIG.policy.mode;
+  const faqs = [
+    {
+      q: "이 페이지는 실제 운영 페이지인가요?",
+      a: "아니오. TF팀 전달용 테스트 페이지입니다. 다자녀 입학 준비금 신청 페이지와 유사하게 작업했습니다."
+    },
+    {
+      q: "신청 데이터는 어디에 저장되나요?",
+      a: "서버와 데이터베이스에는 저장되지 않고, 브라우저 localStorage에만 임시 저장됩니다."
+    },
+    {
+      q: "데이터 저장 없이 학교 목록은 어떻게 구현한 거예요?",
+      a: "각 페이지 index.html 내부에 학교 데이터와 스크립트를 인라인으로 넣었습니다."
+    },
+    {
+      q: "현물과 바우처 중 선택할 수 있나요?",
+      a: isVoucherOnly
+        ? "현재 데모 설정은 바우처 단일형입니다. 각 페이지 내부 APP_CONFIG.policy.mode를 \"choice\"로 바꾸면 선택형 UI를 확인할 수 있습니다."
+        : "현재 데모 설정은 현물/바우처 선택형입니다. 신청서에서 지원형태를 고르면 현물 상세 입력영역이 자동으로 열립니다."
+    },
+    {
+      q: "반과 번호를 꼭 입력해야 하나요?",
+      a: "신입생 시점에는 미정일 수 있어 이 데모에서는 선택 입력처럼 다뤘습니다. 실제 운영 규칙은 TF에서 확정하면 됩니다."
+    },
+    {
+      q: "외주 업체에 무엇을 먼저 전달하면 좋나요?",
+      a: "화면 흐름, 필수 입력항목, 상태값, 학교 키 처리 방식, 사업 정책 변수 등을 먼저 전달하면 구현 범위가 빠르게 정해질 것 같습니다."
+    }
+  ];
 
   mount.innerHTML = `
-    <section class="home-grid">
-      <article class="hero-card">
-        <div class="hero-copy">
-          <p class="eyebrow">TF 시연용</p>
-          <h3>다자녀 입학준비금 구조를 닮은<br>교복 지원 웹페이지 샘플 테스트 페이지</h3>
-          <div class="button-row">
-            <a class="btn btn-primary" href="${window.AppPath.page('apply')}">학부모 신청 화면 보기</a>
-            <a class="btn btn-secondary" href="${window.AppPath.page('admin-list')}">관리자 화면 보기</a>
+    <section class="faq-list">
+      ${faqs.map((item, index) => `
+        <details class="faq-item" ${index === 0 ? "open" : ""}>
+          <summary>${item.q}</summary>
+          <div class="faq-answer">
+            <p>${item.a}</p>
           </div>
-        </div>
-        <div class="hero-points">
-          <div class="mini-stat">
-            <strong>${window.SCHOOLS_DATA.length.toLocaleString()}</strong>
-            <span>학교 데이터</span>
-          </div>
-          <div class="mini-stat">
-            <strong>${items.length}</strong>
-            <span>목업 신청 건수</span>
-          </div>
-          <div class="mini-stat">
-            <strong>${window.AppUtil.getModeLabel(mode)}</strong>
-            <span>현재 설정 모드</span>
-          </div>
-        </div>
-      </article>
-
-    </section>
-
-    <section class="stats-grid">
-      <article class="stat-card">
-        <span class="stat-label">총 접수</span>
-        <strong class="stat-value">${summary.total}</strong>
-      </article>
-      <article class="stat-card">
-        <span class="stat-label">바우처</span>
-        <strong class="stat-value">${summary.voucher}</strong>
-      </article>
-      <article class="stat-card">
-        <span class="stat-label">현물</span>
-        <strong class="stat-value">${summary.inKind}</strong>
-      </article>
-      <article class="stat-card">
-        <span class="stat-label">승인</span>
-        <strong class="stat-value">${summary.byStatus["승인"] || 0}</strong>
-      </article>
-    </section>
-
-
-    <section class="section-block">
-      <div class="section-head">
-        <h3>이 프로토타입에서 보여줄 수 있는 것</h3>
-      </div>
-      <div class="feature-grid">
-        <article class="feature-card">
-          <h4>1. 정책안 비교</h4>
-          <p>바우처 단일형과 선택형의 화면 차이를 같은 구조 안에서 보여줍니다.</p>
-        </article>
-        <article class="feature-card">
-          <h4>2. 행정 입력 중심 UX</h4>
-          <p>관리자 화면은 빠른 입력과 검토에 초점을 둔 표 형식으로 구성했습니다.</p>
-        </article>
-        <article class="feature-card">
-          <h4>3. 외주 이관 용이성</h4>
-          <p>화면 요소를 분리해 JSP/jQuery 구조로 옮기기 쉽게 만들었습니다.</p>
-        </article>
-        <article class="feature-card">
-          <h4>4. 학교 데이터 반영</h4>
-          <p>업로드한 학교 엑셀을 기반으로 지역/학교 선택 데이터를 구성했습니다.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section-block">
-      <div class="section-head">
-        <h3>최근 목업 신청 데이터</h3>
-        <p>브라우저 localStorage 기반 예시 데이터입니다.</p>
-      </div>
-      <div class="table-scroll">
-        <table class="tbl-list">
-          <caption>최근 목업 신청 데이터</caption>
-          <thead>
-            <tr>
-              <th scope="col">접수번호</th>
-              <th scope="col">신청일</th>
-              <th scope="col">학교</th>
-              <th scope="col">학생명</th>
-              <th scope="col">지원형태</th>
-              <th scope="col">상태</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${items.slice(0, 5).map((item) => `
-              <tr>
-                <td>${item.receiptNo}</td>
-                <td>${window.AppUtil.formatDate(item.createdAt)}</td>
-                <td>${window.AppUtil.escapeHtml(item.schoolName)}</td>
-                <td>${window.AppUtil.escapeHtml(item.studentName)}</td>
-                <td>${window.AppUtil.escapeHtml(window.AppUtil.getSupportLabel(item.supportType))}</td>
-                <td><span class="status-pill ${window.AppUtil.statusClass(item.status)}">${window.AppUtil.escapeHtml(item.status)}</span></td>
-              </tr>
-            `).join("")}
-          </tbody>
-        </table>
-      </div>
+        </details>
+      `).join("")}
     </section>
   `;
 });
