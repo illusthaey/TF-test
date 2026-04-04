@@ -10,12 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
     <section class="home-grid">
       <article class="hero-card">
         <div class="hero-copy">
-          <p class="eyebrow">월요일 TF 시연용</p>
-          <h3>다자녀 입학준비금 구조를 닮은<br>교복 지원 웹페이지 프로토타입</h3>
-          <p>
-            상단 GNB, 서브 비주얼, 좌측 사이드메뉴, 학부모 신청 화면,
-            관리자 목록/등록 화면을 한 묶음으로 만든 정적 데모입니다.
-          </p>
+          <p class="eyebrow">TF 시연용</p>
+          <h3>다자녀 입학준비금 구조를 닮은<br>교복 지원 웹페이지 샘플 테스트 페이지</h3>
           <div class="button-row">
             <a class="btn btn-primary" href="apply.html">학부모 신청 화면 보기</a>
             <a class="btn btn-secondary" href="admin-list.html">관리자 화면 보기</a>
@@ -37,14 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </article>
 
-      <article class="summary-card">
-        <h3>정책 전환 포인트</h3>
-        <ul class="check-list">
-          <li><strong>바우처 단일</strong>이면 신청서가 더 단순하고 사용처/정산 안내가 핵심입니다.</li>
-          <li><strong>현물/바우처 택1</strong>이면 지원형태 선택 UI와 현물 상세 입력이 필요합니다.</li>
-          <li>config.js의 <code>policy.mode</code> 값만 바꿔 두 시나리오를 바로 비교할 수 있습니다.</li>
-        </ul>
-      </article>
     </section>
 
     <section class="stats-grid">
