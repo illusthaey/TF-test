@@ -16,23 +16,23 @@ document.addEventListener('DOMContentLoaded', () => {
       </article>
 
       <article class="info-card">
-        <h3>이번 구조 개선 포인트</h3>
+        <h3>기능 개선 사항</h3>
         <ul class="check-list">
-          <li>중복되던 인라인 스크립트를 외부 공통 JS로 분리했습니다.</li>
-          <li>학교 데이터는 분교 통합, 병설유치원 분리 규칙을 반영한 디렉터리로 재구성했습니다.</li>
-          <li>관리자 화면은 학교 담당자용과 도교육청 관리자용으로 분리했습니다.</li>
+          <li>학부모 신청 화면에서 지역/학교급에 따라 학교명 선택지가 필터링됨.</li>
+          <li>학교 담당자 화면에서 데이터별 오름차순/내림차순 정렬 기능 추가</li>
+          <li>신청자별로 상세 정보 및 업무 처리 이력 확인 기능 추가 </li>
         </ul>
       </article>
     </section>
 
     <section class="section-block">
       <div class="section-head">
-        <h3>정책안 비교</h3>
-        <p>선택형 UI와 바우처 단일형 UI의 차이를 한눈에 비교합니다.</p>
+        <h3>지원 방식 비교</h3>
+        <p>선택형 UI와 바우처 단일형 UI의 차이</p>
       </div>
       <div class="table-scroll">
         <table class="tbl-list compare-table">
-          <caption>정책안 비교</caption>
+          <caption>바우처 단일 vs 혼합형</caption>
           <thead>
             <tr>
               <th scope="col">구분</th>
