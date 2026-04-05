@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
   mount.innerHTML = `
     <section class="section-block compact">
       <div class="section-head">
-        <h3>학부모 신청</h3>
-        <p>제출 전에 입력 내용을 한 번 더 확인할 수 있습니다.</p>
+        <h3>학부모 신청 화면</h3>
+        <p>제약 조건: 서버에 개인정보 저장 불가 (개인정보보호법, 도교육청 서버 용량)</p>
       </div>
       ${window.AppForms.renderFormHtml({
         context: 'public',
