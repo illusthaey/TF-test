@@ -54,16 +54,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     <section class="section-block">
       <div class="section-head">
-        <h3>이번 수정에서 반영한 핵심</h3>
+        <h3>다자녀 입학준비금 기반으로 개선하였음</h3>
       </div>
       <div class="feature-grid">
         <article class="feature-card">
           <h4>1. 학교 필터 정교화</h4>
-          <p>지역과 학교급을 어떤 순서로 선택해도 학교 목록이 즉시 함께 좁혀집니다.</p>
+          <p>지역과 학교급 선택 시 해당하는 학교로 선택지가 추려짐 (착오신청 방지)</p>
         </article>
         <article class="feature-card">
-          <h4>2. 반·번호 정규화</h4>
-          <p>신청 시 ‘반’, ‘번’을 붙여 입력해도 관리자 화면에서는 정리된 값으로 조회됩니다.</p>
+          <h4>2. 데이터 형식 정돈</h4>
+          <p>신청 시 ‘반’, ‘번’을 붙여 입력해도 관리자 화면에서는 정리된 값으로 조회됩니다.<br/>
+          같은 반이어도 1반으로 적기도 하고 1로 적기도 했는데 어떻게 적든 동일한 형식으로 나오게 변경 
+          </p>
         </article>
         <article class="feature-card">
           <h4>3. 역할별 관리자 화면 분리</h4>
