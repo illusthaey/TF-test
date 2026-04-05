@@ -24,16 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
     <section class="stats-grid admin-stats-grid" id="school-admin-summary"></section>
 
     <section class="section-block compact">
-      <div class="table-scroll sticky-table-wrap">
+      <div class="table-scroll admin-table-wrap school-admin-table-wrap">
         <table class="tbl-list admin-table admin-table-school" id="school-admin-table">
           <caption>신청 현황 (학교 담당자)</caption>
           <thead>
             <tr>
               <th scope="col" class="sticky-col sticky-col-1">${window.AdminCommon.renderSortButton('신청일시', 'createdAt', { key: '', direction: 'none' })}</th>
               <th scope="col" class="sticky-col sticky-col-2">${window.AdminCommon.renderSortButton('학생 성명', 'studentName', { key: '', direction: 'none' })}</th>
-              <th scope="col" class="sticky-col sticky-col-3">${window.AdminCommon.renderSortButton('학년', 'grade', { key: '', direction: 'none' })}</th>
-              <th scope="col" class="sticky-col sticky-col-4">${window.AdminCommon.renderSortButton('반', 'className', { key: '', direction: 'none' })}</th>
-              <th scope="col" class="sticky-col sticky-col-5">${window.AdminCommon.renderSortButton('번호', 'studentNo', { key: '', direction: 'none' })}</th>
+              <th scope="col">${window.AdminCommon.renderSortButton('학년', 'grade', { key: '', direction: 'none' })}</th>
+              <th scope="col">${window.AdminCommon.renderSortButton('반', 'className', { key: '', direction: 'none' })}</th>
+              <th scope="col">${window.AdminCommon.renderSortButton('번호', 'studentNo', { key: '', direction: 'none' })}</th>
               <th scope="col">${window.AdminCommon.renderSortButton('생년월일', 'birthDate', { key: '', direction: 'none' })}</th>
               <th scope="col">${window.AdminCommon.renderSortButton('보호자 성명', 'parentName', { key: '', direction: 'none' })}</th>
               <th scope="col">${window.AdminCommon.renderSortButton('보호자 연락처', 'parentPhone', { key: '', direction: 'none' })}</th>
@@ -177,9 +177,9 @@ document.addEventListener('DOMContentLoaded', () => {
       <tr>
         <th scope="col" class="sticky-col sticky-col-1">${window.AdminCommon.renderSortButton('신청일시', 'createdAt', state.sort)}</th>
         <th scope="col" class="sticky-col sticky-col-2">${window.AdminCommon.renderSortButton('학생 성명', 'studentName', state.sort)}</th>
-        <th scope="col" class="sticky-col sticky-col-3">${window.AdminCommon.renderSortButton('학년', 'grade', state.sort)}</th>
-        <th scope="col" class="sticky-col sticky-col-4">${window.AdminCommon.renderSortButton('반', 'className', state.sort)}</th>
-        <th scope="col" class="sticky-col sticky-col-5">${window.AdminCommon.renderSortButton('번호', 'studentNo', state.sort)}</th>
+        <th scope="col">${window.AdminCommon.renderSortButton('학년', 'grade', state.sort)}</th>
+        <th scope="col">${window.AdminCommon.renderSortButton('반', 'className', state.sort)}</th>
+        <th scope="col">${window.AdminCommon.renderSortButton('번호', 'studentNo', state.sort)}</th>
         <th scope="col">${window.AdminCommon.renderSortButton('생년월일', 'birthDate', state.sort)}</th>
         <th scope="col">${window.AdminCommon.renderSortButton('보호자 성명', 'parentName', state.sort)}</th>
         <th scope="col">${window.AdminCommon.renderSortButton('보호자 연락처', 'parentPhone', state.sort)}</th>
@@ -201,9 +201,9 @@ document.addEventListener('DOMContentLoaded', () => {
       <tr>
         <td class="sticky-col sticky-col-1">${window.AppUtil.formatDateTime(item.createdAt)}</td>
         <td class="sticky-col sticky-col-2"><strong>${window.AppUtil.escapeHtml(item.studentName)}</strong></td>
-        <td class="sticky-col sticky-col-3">${window.AppUtil.escapeHtml(item.grade)}학년</td>
-        <td class="sticky-col sticky-col-4">${window.AppUtil.escapeHtml(item.className || '-')}</td>
-        <td class="sticky-col sticky-col-5">${window.AppUtil.escapeHtml(item.studentNo || '-')}</td>
+        <td>${window.AppUtil.escapeHtml(item.grade)}학년</td>
+        <td>${window.AppUtil.escapeHtml(item.className || '-')}</td>
+        <td>${window.AppUtil.escapeHtml(item.studentNo || '-')}</td>
         <td>${window.AppUtil.escapeHtml(item.birthDate || '-')}</td>
         <td>${window.AppUtil.escapeHtml(item.parentName || '-')}</td>
         <td>${window.AppUtil.escapeHtml(item.parentPhone || '-')}</td>

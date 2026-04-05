@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <section class="stats-grid admin-stats-grid" id="office-admin-summary"></section>
 
     <section class="section-block compact">
-      <div class="table-scroll">
+      <div class="table-scroll admin-table-wrap office-admin-table-wrap">
         <table class="tbl-list admin-table admin-table-office" id="office-admin-table">
           <caption>신청 현황 (도교육청 관리자)</caption>
           <thead></thead>
