@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     <section class="home-grid">
       <article class="hero-card">
         <div class="hero-copy">
-          <p class="eyebrow">TF 시연용</p>
-          <h3>교복 지원 신청부터<br>학교·도교육청 관리자 조회까지 한 번에 확인하는 데모</h3>
+          <p class="eyebrow">TF 시연용 테스트 페이지</p>
+          <h3>사업 부서 의사 결정 및 소통 보조 도구</h3>
           <div class="button-row">
             <a class="btn btn-primary" href="${window.AppPath.page('apply')}">학부모 신청 화면 보기</a>
             <a class="btn btn-secondary" href="${window.AppPath.page('admin-list')}">관리자 화면 선택</a>
@@ -19,15 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="hero-points">
           <div class="mini-stat">
             <strong>${window.AppSchools.canonicalSchools.length.toLocaleString()}</strong>
-            <span>정리된 학교 목록</span>
+            <span>강원특별자치도 소속 학교 목록</span>
           </div>
           <div class="mini-stat">
             <strong>${items.length}</strong>
-            <span>목업 신청 건수</span>
+            <span>신청 건수 (테스트용)</span>
           </div>
           <div class="mini-stat">
             <strong>${window.APP_CONFIG.statuses.length}</strong>
-            <span>상태 단계</span>
+            <span>진행 상태 단계</span>
           </div>
         </div>
       </article>
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     <section class="stats-grid">
       <article class="stat-card">
-        <span class="stat-label">총 접수</span>
+        <span class="stat-label">총 접수 건</span>
         <strong class="stat-value">${summary.total}</strong>
       </article>
       <article class="stat-card">
