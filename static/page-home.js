@@ -64,16 +64,16 @@ document.addEventListener('DOMContentLoaded', () => {
         <article class="feature-card">
           <h4>2. 데이터 형식 정돈</h4>
           <p>신청 시 ‘반’, ‘번’을 붙여 입력해도 관리자 화면에서는 정리된 값으로 조회됩니다.<br/>
-          같은 반이어도 1반으로 적기도 하고 1로 적기도 했는데 어떻게 적든 동일한 형식으로 나오게 변경 
+          학부모마다 반의 경우 "1반", "1", 번호의 경우 "13번, "13"으로 다르게 적은 데이터를 일관성 있게 통일해서 보여줌 
           </p>
         </article>
         <article class="feature-card">
-          <h4>3. 역할별 관리자 화면 분리</h4>
-          <p>학교 담당자용 화면과 도교육청 관리자용 화면을 별도 HTML로 나눴습니다.</p>
+          <h4>3. 학부모 신청화면과 학교담당자 화면 둘 다 구현</h4>
+          <p>업무 처리 중 불편하던 거 개선 반영함</p>
         </article>
         <article class="feature-card">
-          <h4>4. 공통 스크립트 분리</h4>
-          <p>중복되던 설정·학교 데이터·유틸을 static 폴더로 분리해 가독성을 높였습니다.</p>
+          <h4>4. 기타</h4>
+          <p>전체적인 변경 사항에 대해 자세한 설명은 필요시 따로 작성</p>
         </article>
       </div>
     </section>
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <section class="section-block">
       <div class="section-head">
         <h3>최근 신청 데이터</h3>
-        <p>localStorage에 저장된 데모 데이터 기준입니다.</p>
+        <p>예시입니다.</p>
       </div>
       <div class="table-scroll">
         <table class="tbl-list compact-table">
