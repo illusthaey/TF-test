@@ -32,19 +32,19 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="feature-grid">
         <article class="feature-card">
           <h4>학교 담당자 화면</h4>
-          <p>반려 처리, 학교장 승인 대기 건 변경, 번호까지의 틀고정 스크롤을 중점적으로 확인합니다.</p>
+          <p>반려 처리, 학교장 승인 대기 건 변경, 번호까지의 틀고정 스크롤.</p>
         </article>
         <article class="feature-card">
           <h4>도교육청 관리자 화면</h4>
-          <p>지역, 학교급, 학교명 필터와 헤더 3단계 정렬 동작을 확인합니다.</p>
+          <p>지역, 학교급, 학교명 필터, 헤더 3단계 정렬 동작.</p>
         </article>
         <article class="feature-card">
           <h4>학교 필터 규칙</h4>
-          <p>분교는 본교로 통합하고, 병설유치원은 유치원 급에서만 별도 선택되도록 구성했습니다.</p>
+          <p>분교는 본교로 통합하고, 병설유치원은 유치원 급에서만 별도 선택되도록 구성</p>
         </article>
         <article class="feature-card">
           <h4>데이터 정규화</h4>
-          <p>‘달반’과 ‘달’, ‘3번’과 ‘3’이 관리자 화면에서 같은 값으로 취급되는지 확인합니다.</p>
+          <p>‘달반’과 ‘달’, ‘3번’과 ‘3’이 관리자 화면에서 같은 값으로 취급되는지 확인.</p>
         </article>
       </div>
     </section>
